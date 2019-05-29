@@ -53,7 +53,7 @@ app.use(cookieParser());
 
 // To store session information. By default it is stored as a cookie on browser
 app.use(session({
-	key: 'ooadp',
+	key: 'vidjot_session',
 	secret: 'tojiv',
 	resave: false,
 	saveUninitialized: false,
