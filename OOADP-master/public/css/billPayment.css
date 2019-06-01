@@ -3,7 +3,7 @@
 	margin: 0px;
 }
 
-#title {
+html {
     font-family: Verdana;
 }
 
@@ -30,6 +30,17 @@
 	margin-right: 10px;
 }
 
+.row {
+	margin-top: 30px;
+}
+
+.col-sm-2 {
+	border: 1px solid rgba(0,0,0,0.125);
+	border-radius: 0.25rem;
+	margin: 5px;
+	text-align: center;
+}
+
 #NRIC, #email {
 	width: 300px;
 }
@@ -39,6 +50,27 @@
 	height: 100px;
 }
 
-label {
-    font-size: 16px;
+#title {
+	font-weight: bold;
+	text-align: center;
+}
+
+#queueNo {
+	font-weight: bold;
+	text-align: center;
+	font-size: 100px;
+}
+
+#previousNo {
+	margin-left: 50px;
+}
+
+#counter {
+	font-weight: bold;
+	text-align: center;
+	font-size: 50px;
+}
+
+#counterNo {
+	color: red;
 }

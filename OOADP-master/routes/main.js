@@ -7,7 +7,19 @@ router.get('/', (req, res) => {
 });
 
 router.get('/billPayment', (req, res) => {
-    res.render('billPayment');
+    res.render('./templates/billPayment');
 });
+
+router.get('/creditcard', (req, res) => {
+    res.render('./templates/creditcard');
+});
+
+router.get('/debitcard', (req, res) => {
+    res.render('./templates/debitcard');
+});
+
+router.get('/queueNumber', (req, res) => {
+    res.render('./templates/queueNumber');
+})
 
 module.exports = router;

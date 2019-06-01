@@ -9,6 +9,17 @@ const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const passport = require('passport');
+//const MySQLStore = require('express-mysql-session');
+//const db = require('./config/db'); // db.js config file
+// Bring in database connection
+//const vidjotDB = require('./config/DBConnection');
+// Connects to MySQL database
+//vidjotDB.setUpDB(false); // To set up database with new tables set (true)
+// Passport Config
+//const authenticate = require('./config/passport');
+//authenticate.localStrategy(passport);
+
 /*
 * Loads routes file main.js in routes directory. The main.js determines which function
 * will be called based on the HTTP request and URL.
@@ -51,6 +62,30 @@ app.use(methodOverride('_method'));
 // Enables session to be stored using browser's Cookie ID
 app.use(cookieParser());
 
+// Express session middleware - uses MySQL to store session
+// app.use(session({
+// 	key: 'vidjot_session',
+// 	secret: 'tojiv',
+// 	store: new MySQLStore({
+// 		host: db.host,
+// 		port: 3306,
+// 		user: db.username,
+// 		password: db.password,
+// 		database: db.database,
+// 		clearExpired: true,
+// 		// How frequently expired sessions will be cleared; milliseconds:
+// 		checkExpirationInterval: 900000,
+// 		// The maximum age of a valid session; milliseconds:
+// 		expiration: 900000,
+// 	}),
+// 	resave: false,
+// 	saveUninitialized: false
+// }));
+
+// Initilize Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
 // To store session information. By default it is stored as a cookie on browser
 app.use(session({
 	key: 'vidjot_session',
@@ -69,7 +104,8 @@ app.use(function (req, res, next) {
 * Defines that any root URL with '/' that Node JS receives request from, for eg. http://localhost:5000/, will be handled by
 * mainRoute which was defined earlier to point to routes/main.js
 * */
-app.use('/', mainRoute); // mainRoute is declared to point to routes/main.js
+app.use('/', mainRoute);
+// mainRoute is declared to point to routes/main.js
 // This route maps the root URL to any path defined in main.js
 
 /*
