@@ -21,5 +21,11 @@ router.get('/debitcard', (req, res) => {
 router.get('/queueNumber', (req, res) => {
     res.render('./templates/queueNumber');
 })
+router.get('/doctorConsultation',(req, res) =>{
+    res.render('./templates/doc_consult');
+});
 
+router.get('/collection',(req, res) =>{
+    res.render('./templates/collection');
+})
 module.exports = router;
