@@ -10,6 +10,11 @@ const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+
+// call hbs for partial handlebars and register directory, all handlebars in it.
+var hbs = require('hbs');
+hbs.registerPartials(__dirname + '/views/partials');
+
 //const MySQLStore = require('express-mysql-session');
 //const db = require('./config/db'); // db.js config file
 // Bring in database connection
