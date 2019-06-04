@@ -27,5 +27,18 @@ router.get('/doctorConsultation',(req, res) =>{
 
 router.get('/collection',(req, res) =>{
     res.render('./templates/collection');
+});
+
+router.get('/symptom', (req, res) => {
+    res.render('./templates/symptomchecker');
+});
+
+router.get('/symptomanswer', (req, res) => {
+    res.render('./templates/symptomanswers');
+});
+
+router.get('/patientinformation', (req, res) => {
+    res.render('./templates/patientinformation');
 })
+
 module.exports = router;
