@@ -6,6 +6,10 @@ router.get('/', (req, res) => {
 	res.render('index', {title: title}) // renders views/index.handlebars
 });
 
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard');
+});
+
 router.get('/billPayment', (req, res) => {
     res.render('./templates/billPayment');
 });
