@@ -1,0 +1,29 @@
+.wholeForm {
+    text-align: center;
+    padding-top: 100px;
+    border: 1px solid black;
+}
+
+.card {
+    position: relative;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 0.25rem;
+}
+
+.medicalHistory { 
+    display: inline-block;
+}
+
+#history {
+    float: right;
+    border: 1px solid grey;
+}
+
+#symptomNotes, #symptomPrescriptions, #symptomComments {
+    width: 1050px;
+}
+
+#submitSkip, #submitSubmit {
+    float: right;
+}
