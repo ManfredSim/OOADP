@@ -1,13 +1,8 @@
-.medical_box::-webkit-scrollbar{
-    width: 20px;
-}
-
-.medical_box::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-
-.medical_box::-webkit-scrollbar-thumb {
-    background: black; 
-    border-radius: 10px;
+#medicine_box {
+  height: 250px;
+  width: 350px; 
+  padding:3px; 
+  overflow: auto;
+  border-style: solid;
+  border-radius: 1mm;
   }

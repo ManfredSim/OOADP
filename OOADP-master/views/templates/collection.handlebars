@@ -1,35 +1,63 @@
+<link rel="stylesheet" href="/public/css/collection.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
 <div class="search-container">
-    <input type="text" placeholder="Search.." name="search">
+    <input type="text" placeholder="Search.." id="search">
     <button type="submit"><i class="fa fa-search"></i></button>
 </div>
 <hr>
-<div>
-    <img src = "...">
-    <span name = "name">Niyu Yu Hong</span>
-    <span name = "NRIC">S9975358G</span>
-    <span name = "medical_hist">Medical History</span>
-    <div>
-        <table>
-            <tr>
-                <th>Medicine</th>
-                <th>Dispend or not dispend</th>
-            </tr>
-            <tr>
-                <td>Doxycyline (2 tablets , 3 times per day)</td>
-                <td><input type="checkbox" value="check"></td>
-            </tr>
-            <tr>
-                <td>Clindamycin (1 tablets , 3 times per day)</td>
-                <td><input type="checkbox" value="check"></td>
-            </tr>
-            <tr>
-                <td>Linzolid (1 tablets, once a day)</td>
-                <td><input type="checkbox" value="check"></td>
-            </tr>
-        </table>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+        <br>
+            <img src = "...">
+            <div id = "id">Niyu Yu Hong</div>
+            <div id = "NRIC">S9975358G</div>
+            <div id = "medical_hist">Medical History</div>
+            <div>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Medicine</th>
+                            <th>Dispend or not dispend</th>
+                        </tr>
+                    </thead>
+                    <colgroup>
+                        <col class="col-md-4">
+                        <col class="col-md-7">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>Doxycyline (2 tablets , 3 times per day)</td>
+                            <td><input type="checkbox" value="check"></td>
+                        </tr>
+                        <tr>
+                            <td>Clindamycin (1 tablets , 3 times per day)</td>
+                            <td><input type="checkbox" value="check"></td>
+                        </tr>
+                        <tr>
+                            <td>Linzolid (1 tablets, once a day)</td>
+                            <td><input type="checkbox" value="check"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>    
+    
+            <div class="col-sm-4">
+                <p>Allergy</p>
+                <p id = "allergy_container">He is allergy to peanut</p>
+                <button id = "Button_done">Done</button>
+            </div>
     </div>
-    <span>Allergy</span>
-    <div name = "allergy_container">He is allergy to peanut</div>
-    <button>Done</button>
 </div>
-<hr>
