@@ -11,12 +11,12 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
-//const MySQLStore = require('express-mysql-session');
-//const db = require('./config/db'); // db.js config file
+const MySQLStore = require('express-mysql-session');
+const db = require('./config/db'); // db.js config file
 // Bring in database connection
-//const vidjotDB = require('./config/DBConnection');
+const projectDB = require('./config/DBConnection');
 // Connects to MySQL database
-//vidjotDB.setUpDB(false); // To set up database with new tables set (true)
+projectDB.setUpDB(false); // To set up database with new tables set (true)
 // Passport Config
 //const authenticate = require('./config/passport');
 //authenticate.localStrategy(passport);

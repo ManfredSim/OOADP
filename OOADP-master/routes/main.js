@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const Allergy=require('../models/Allergy');
+
 router.get('/', (req, res) => {
 	const title = 'OOADP';
 	res.render('index', {title: title}) // renders views/index.handlebars
@@ -55,6 +57,10 @@ router.get('/symptomanswer', (req, res) => {
 
 router.get('/patientinformation', (req, res) => {
     res.render('./templates/patientinformation');
+})
+ 
+Allergy.create({
+    allergy_name: 'testname1'
 })
 
 module.exports = router;

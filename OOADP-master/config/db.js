@@ -1,6 +1,6 @@
 module.exports = {
-    host: 'ooadp',
-    database: 'ooadp',
-    username: 'Admin',
-    password: '1234'
+    host: 'localhost',
+    database: 'projectdb',
+    username: 'itp211',
+    password: 'itp211itp211'
 }
