@@ -10,6 +10,18 @@ router.get('/dashboard', (req, res) => {
     res.render('dashboard');
 });
 
+router.get('/profile', (req, res) => {
+    res.render('profile');
+});
+
+router.get('/reminders', (req, res) => {
+    res.render('reminders');
+});
+
+router.get('/appointments', (req, res) => {
+    res.render('appointments');
+});
+
 router.get('/billPayment', (req, res) => {
     res.render('./templates/billPayment');
 });
