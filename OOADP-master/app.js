@@ -10,6 +10,7 @@ const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const { radioCheck } = require('./helpers/hbs');
 
 const MySQLStore = require('express-mysql-session');
 const db = require('./config/db'); // db.js config file
@@ -44,6 +45,9 @@ const app = express();
 *
 * */
 app.engine('handlebars', exphbs({
+	helpers: {
+		radioCheck: radioCheck
+	},
 	defaultLayout: 'main' // Specify default template views/layout/main.handlebar 
 }));
 app.set('view engine', 'handlebars');
