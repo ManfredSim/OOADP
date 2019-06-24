@@ -4,6 +4,10 @@
     border: 1px solid black;
 }
 
+.answer {
+    vertical-align: middle;
+}
+
 .card {
     position: relative;
     padding: 10px;
@@ -17,7 +21,12 @@
 
 #history {
     float: right;
-    border: 1px solid grey;
+    border: 1px solid black;
+}
+
+.nameAge {
+    float: left;
+    border: 1px solid black;
 }
 
 #symptomNotes, #symptomPrescriptions, #symptomComments {
@@ -26,4 +35,19 @@
 
 #submitSkip, #submitSubmit {
     float: right;
+}
+
+.symptomNotes {
+    border: 1px solid black;
+    display: block;
+}
+
+.symptomAnswer {
+    border: 1px solid black;
+    display: block;
+}
+
+.symptomRecimmend {
+    border: 1px solid black;
+    display: block;
 }
