@@ -27,6 +27,7 @@ projectDB.setUpDB(false); // To set up database with new tables set (true)
 * will be called based on the HTTP request and URL.
 */
 const mainRoute = require('./routes/main');
+const billRoute = require('./routes/bill');
 
 /*
 * Creates an Express server - Express is a web application framework for creating web applications
@@ -110,6 +111,7 @@ app.use(function (req, res, next) {
 * mainRoute which was defined earlier to point to routes/main.js
 * */
 app.use('/', mainRoute);
+app.use('/bill', billRoute);
 // mainRoute is declared to point to routes/main.js
 // This route maps the root URL to any path defined in main.js
 

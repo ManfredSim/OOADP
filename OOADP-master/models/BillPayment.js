@@ -24,10 +24,11 @@ const BillPayment = db.define('bill', {
         type: Sequelize.STRING(2000)
     },
     contact_no: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
     },
     payment_method: {
         type: Sequelize.STRING
     }
 });
+
 module.exports = BillPayment;
