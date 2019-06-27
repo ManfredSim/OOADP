@@ -28,6 +28,27 @@ const BillPayment = db.define('bill', {
     },
     payment_method: {
         type: Sequelize.STRING
+    },
+    creditcardtype: {
+        type: Sequelize.STRING
+    },
+    debitcardtype: {
+        type: Sequelize.STRING
+    },   
+    accountNo: {
+        type: Sequelize.STRING
+    },
+    payAmt: {
+        type: Sequelize.STRING
+    },
+    cardNo: {
+        type: Sequelize.STRING
+    },
+    cardExpiry: {
+        type: Sequelize.STRING
+    },
+    cardVerify: {
+        type: Sequelize.STRING
     }
 });
 

@@ -4,11 +4,17 @@
 }
 
 html {
-    font-family: Verdana;
+	font-family: Verdana;
+}
+
+body {
+	margin-bottom: 10px;
+	background-color: #cccccc;
 }
 
 .container {
 	max-width: 800px;
+
 }
 
 .card {
@@ -39,15 +45,6 @@ html {
 	border-radius: 0.25rem;
 	margin: 5px;
 	text-align: center;
-}
-
-#NRIC, #email {
-	width: 300px;
-}
-
-#address {
-	width: 400px;
-	height: 100px;
 }
 
 #title {

@@ -3,20 +3,21 @@
 <div class="container">
 	<div class="card card-body">
 		<h3 id="title">Enter Payment Information</h3>
-		<form action="#" method="post" id="payBill">
+		<form action="/bill/saveCreditCard/{{bill.id}}?_method=PUT" method="post">
+		<input type="hidden" name="_method" value="PUT">
 			<div class="form-group">
 				<label for="creditcardtype">Credit Card Type *</label>
 				<div class="form-block">
 					<div class="form-check form-check-inline" style="display: inline-block;">
-						<input class="form-check-input" type="radio" name="creditcardtype" id="visa" value="Credit Card" checked required>
+						<input class="form-check-input" type="radio" name="creditcardtype" id="visa" value="VISA" checked required>
 						<label class="form-check-label">VISA</label>
 					</div>
 					<div class="form-check form-check-inline" style="display: inline-block;">
-						<input class="form-check-input" type="radio" name="creditcardtype" id="mastercard" value="Credit Card">
+						<input class="form-check-input" type="radio" name="creditcardtype" id="mastercard" value="Mastercard">
 						<label class="form-check-label">Mastercard</label>
 					</div>
 					<div class="form-check form-check-inline" style="display: inline-block;">
-						<input class="form-check-input" type="radio" name="creditcardtype" id="maestro" value="Credit Card">
+						<input class="form-check-input" type="radio" name="creditcardtype" id="maestro" value="Maestro">
 						<label class="form-check-label">Maestro</label>
 					</div>
 				</div>

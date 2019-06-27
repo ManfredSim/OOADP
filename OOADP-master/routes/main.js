@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
-
-const Allergy=require('../models/Allergy');
+const Allergy = require('../models/Allergy');
 
 router.get('/', (req, res) => {
-	const title = 'OOADP';
-	res.render('index', {title: title}) // renders views/index.handlebars
+    const title = 'OOADP';
+    res.render('index', { title: title }) // renders views/index.handlebars
 });
 
 router.get('/dashboard', (req, res) => {
@@ -24,26 +23,11 @@ router.get('/appointments', (req, res) => {
     res.render('appointments');
 });
 
-router.get('/billPayment', (req, res) => {
-    res.render('./templates/billPayment');
-});
-
-router.get('/creditcard', (req, res) => {
-    res.render('./templates/creditcard');
-});
-
-router.get('/debitcard', (req, res) => {
-    res.render('./templates/debitcard');
-});
-
-router.get('/queueNumber', (req, res) => {
-    res.render('./templates/queueNumber');
-})
-router.get('/doctorConsultation',(req, res) =>{
+router.get('/doctorConsultation', (req, res) => {
     res.render('./templates/doc_consult');
 });
 
-router.get('/collection',(req, res) =>{
+router.get('/collection', (req, res) => {
     res.render('./templates/collection');
 });
 
@@ -58,7 +42,7 @@ router.get('/symptomanswer', (req, res) => {
 router.get('/patientinformation', (req, res) => {
     res.render('./templates/patientinformation');
 })
- 
+
 Allergy.create({
     allergy_name: 'testname1'
 })

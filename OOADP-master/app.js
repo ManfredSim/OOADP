@@ -10,6 +10,8 @@ const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const flash = require('connect-flash');
+const FlashMessenger = require('flash-messenger');
 const { radioCheck } = require('./helpers/hbs');
 
 const MySQLStore = require('express-mysql-session');
@@ -28,6 +30,7 @@ projectDB.setUpDB(false); // To set up database with new tables set (true)
 */
 const mainRoute = require('./routes/main');
 const billRoute = require('./routes/bill');
+const queueRoute = require('./routes/queue');
 
 /*
 * Creates an Express server - Express is a web application framework for creating web applications
@@ -100,6 +103,9 @@ app.use(session({
 	saveUninitialized: false,
 }));
 
+app.use(flash());
+app.use(FlashMessenger.middleware);
+
 // Place to define global variables - not used in practical 1
 app.use(function (req, res, next) {
 	next();
@@ -112,6 +118,7 @@ app.use(function (req, res, next) {
 * */
 app.use('/', mainRoute);
 app.use('/bill', billRoute);
+app.use('/queue', queueRoute);
 // mainRoute is declared to point to routes/main.js
 // This route maps the root URL to any path defined in main.js
 
