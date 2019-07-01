@@ -124,7 +124,8 @@ app.use('/bill', billRoute);
 app.use('/queue', queueRoute);
 // mainRoute is declared to point to routes/main.js
 // This route maps the root URL to any path defined in main.js
-
+require('./models/DoctorPatientInformation')
+require('./models/Symptom')
 /*
 * Creates a unknown port 5000 for express server since we don't want our app to clash with well known
 * ports such as 80 or 8080.

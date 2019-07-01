@@ -13,4 +13,4 @@ const Doctor = db.define('doctor', {
     },
 });
 
-module.exports = Symptom;
+module.exports = Doctor;
