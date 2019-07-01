@@ -2,11 +2,17 @@ const Sequelize = require('sequelize');
 const db = require('../config/DBConfig');
 
 const MedicineCollection= db.define('collection',{
-    id: {
-        type: sequalize.INTEGER
+    name: {
+        type: Sequelize.STRING
+    },
+    nric: {
+        type: Sequelize.STRING
+    },
+    queue_num: {
+        type: Sequelize.INTEGER
     },
     medicine: {
-        type: sequalize.STRING
+        type: Sequelize.STRING
     }
 });
 module.exports = MedicineCollection;

@@ -2,17 +2,23 @@ const Sequelize = require('sequelize');
 const db = require('../config/DBConfig');
 
 const doc_consult= db.define('consultation',{
-    id: {
-        type: sequalize.INTEGER
+    name: {
+        type: Sequelize.STRING
+    },
+    nric: {
+        type: Sequelize.STRING
+    },
+    queue_num: {
+        type: Sequelize.INTEGER
     },
     description: {
-        type: sequalize.STRING
+        type: Sequelize.STRING
     },
     medicine_id : {
-        type: sequalize.STRING
+        type: Sequelize.STRING
     },
     medicine: {
-        type: sequalize.STRING
+        type: Sequelize.STRING
     }
     
 });

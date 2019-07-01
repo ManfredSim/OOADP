@@ -32,6 +32,9 @@ const mainRoute = require('./routes/main');
 const billRoute = require('./routes/bill');
 const queueRoute = require('./routes/queue');
 
+//database models
+require('./models/collection')
+require('./models/doc_consult')
 /*
 * Creates an Express server - Express is a web application framework for creating web applications
 * in Node JS.
