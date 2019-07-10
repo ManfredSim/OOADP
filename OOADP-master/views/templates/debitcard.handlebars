@@ -3,21 +3,22 @@
 <div class="container">
     <div class="card card-body">
         <h3 id="title">Enter Payment Information</h3>
-		<form action="" method="post" id="payBill">
+		<form action="/bill/saveDebitCard/{{bill.id}}?_method=PUT" method="post">
+		<input type="hidden" name="_method" value="PUT">
 			<div class="form-group">
 				<label for="debitcardtype">Debit Card Type *</label>
 				<div class="form-block">
 				<div class="form-check form-check-inline" style="display: inline-block;">
 				    <input class="form-check-input" type="radio" name="debitcardtype" id="visa" value="VISA" checked required>
-					<label class="form-check-label">VISA</label>
+					<label class="form-check-label"><i class="fa fa-cc-visa"></i> VISA</label>
 				</div>
 				<div class="form-check form-check-inline" style="display: inline-block;">
 					<input class="form-check-input" type="radio" name="debitcardtype" id="mastercard" value="Mastercard">
-					<label class="form-check-label">Mastercard</label>
+					<label class="form-check-label"><i class="fa fa-cc-mastercard"></i> Mastercard</label>
 				</div>
 				<div class="form-check form-check-inline" style="display: inline-block;">
 					<input class="form-check-input" type="radio" name="debitcardtype" id="maestro" value="Maestro">
-					<label class="form-check-label">Maestro</label>
+					<label class="form-check-label"><i class="fa fa-credit-card"></i> Maestro</label>
 				</div>
 				</div>
 			</div>	
@@ -26,7 +27,7 @@
 				<input type="number" class="form-control" name="accountNo" id="accountNo" rows="1" style="display: block;" required>
 			</div>
 			<div class="form-group">
-				<label for="payAmt">Payment Amount *</label>
+				<label for="payAmt"><i class="fa fa-dollar"></i> Payment Amount *</label>
 				<input type="number" class="form-control" name="payAmt" id="payAmt" rows="1" style="display: block;" required>
 			</div>
 			<div class="form-group">
@@ -35,7 +36,7 @@
 			</div>		
             		
 			    <div class="form-group">
-				    <label for="cardExpiry">Debit Card Expiry Date *</label>
+				    <label for="cardExpiry"><i class="fa fa-calendar"></i> Debit Card Expiry Date *</label>
 				    <input type="date" class="form-control" name="cardExpiry" id="cardExpiry" rows="1" style="display: block;" required></input>
 			    </div>	
 			    <div class="form-group">
