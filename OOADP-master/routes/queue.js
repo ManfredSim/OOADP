@@ -28,7 +28,7 @@ router.post('/queueNumber', (req, res) => {
         queueNo,
         counterNo
     }).then(queue => {
-        alertMessage(res, 'success', 'Queue Added', 'fas fa-check', true);
+        alertMessage(res, 'success', 'Queue Added', 'fa fa-check', true);
         res.redirect('/queue/queueNumber');
         count += 1;
     })

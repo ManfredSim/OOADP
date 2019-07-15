@@ -12,6 +12,7 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const flash = require('connect-flash');
 const FlashMessenger = require('flash-messenger');
+const { formatDate } = require('./helpers/hbs');
 const { radioCheck } = require('./helpers/hbs');
 
 const MySQLStore = require('express-mysql-session');
@@ -34,9 +35,6 @@ const queueRoute = require('./routes/queue');
 const doctorRoute = require('./routes/doctor');
 // const symptomRoute = require('./routes/symptom')
 
-//database models
-require('./models/collection')
-require('./models/doc_consult')
 /*
 * Creates an Express server - Express is a web application framework for creating web applications
 * in Node JS.
@@ -55,6 +53,7 @@ const app = express();
 * */
 app.engine('handlebars', exphbs({
 	helpers: {
+		formatDate: formatDate,
 		radioCheck: radioCheck
 	},
 	defaultLayout: 'main' // Specify default template views/layout/main.handlebar 
@@ -128,8 +127,7 @@ app.use('/doctor', doctorRoute);
 // app.use('/symptom', symptomRoute)
 // mainRoute is declared to point to routes/main.js
 // This route maps the root URL to any path defined in main.js
-require('./models/DoctorPatientInformation')
-require('./models/Symptom')
+
 /*
 * Creates a unknown port 5000 for express server since we don't want our app to clash with well known
 * ports such as 80 or 8080.

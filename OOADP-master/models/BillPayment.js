@@ -45,7 +45,7 @@ const BillPayment = db.define('bill', {
         type: Sequelize.STRING
     },
     cardExpiry: {
-        type: Sequelize.STRING
+        type: Sequelize.DATE
     },
     cardVerify: {
         type: Sequelize.STRING
