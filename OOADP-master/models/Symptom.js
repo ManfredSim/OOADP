@@ -1,5 +1,7 @@
+// remember to add filename to config.js under sequelizeModels in order to create table
 const Sequelize = require('sequelize');
-const db = require('../config/DBConfig');
+const connection = require('../seqConn');
+
 
 const Symptom = db.define('symptom', {
     counter: {
