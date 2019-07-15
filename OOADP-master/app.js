@@ -31,6 +31,8 @@ projectDB.setUpDB(false); // To set up database with new tables set (true)
 const mainRoute = require('./routes/main');
 const billRoute = require('./routes/bill');
 const queueRoute = require('./routes/queue');
+const doctorRoute = require('./routes/doctor');
+// const symptomRoute = require('./routes/symptom')
 
 //database models
 require('./models/collection')
@@ -122,6 +124,8 @@ app.use(function (req, res, next) {
 app.use('/', mainRoute);
 app.use('/bill', billRoute);
 app.use('/queue', queueRoute);
+app.use('/doctor', doctorRoute);
+// app.use('/symptom', symptomRoute)
 // mainRoute is declared to point to routes/main.js
 // This route maps the root URL to any path defined in main.js
 require('./models/DoctorPatientInformation')

@@ -20,15 +20,6 @@ const Symptom = db.define('symptom', {
     answer_four: {
         type: Sequelize.STRING
     },
-    result_symptom: {
-        type: Sequelize.STRING
-    },
-    result_text: {
-        type: Sequelize.STRING
-    },
-    result_recommend: {
-        type: Sequelize.STRING
-    },
 });
 
 module.exports = Symptom;

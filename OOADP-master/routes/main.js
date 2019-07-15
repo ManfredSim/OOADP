@@ -47,4 +47,5 @@ Allergy.create({
     allergy_name: 'testname1'
 })
 
+
 module.exports = router;
